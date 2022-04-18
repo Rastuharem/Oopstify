@@ -20,7 +20,6 @@ const rooty = () => {
           window.__REDUX_DEVTOOLS_EXTENSION__()
       )}
     >
-      <Navigate replace to="/welcome"></Navigate>
       <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<MainPage/>}/>
