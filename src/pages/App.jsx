@@ -1,12 +1,11 @@
 import React from "react";
-import MainPage from "./MainPage.jsx";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import NavBar from "../components/NavBar.jsx";
+import "../styles/App.css"
+import WelcomePage from "../pages/WelcomePage"
 
 const App = () => {
   return (
     <>
-        <NavBar/>
+        <WelcomePage/>
     </>
   );
 };

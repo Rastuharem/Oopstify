@@ -1,8 +1,8 @@
 import React from "react";
 import NavBar from "../components/NavBar";
-import "../styles/Playlist.css";
+import "../styles/PlaylistPage.css";
 
-const Playlist = () => {
+const PlaylistPage = () => {
     return(
         <>
             <NavBar></NavBar>
@@ -10,4 +10,4 @@ const Playlist = () => {
     );
 };
 
-export default Playlist;
+export default PlaylistPage;

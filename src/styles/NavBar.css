@@ -22,7 +22,17 @@
 .fa-oopstify {
   color: white;
   font-size: 2rem;
-  width: 90px;
+  padding-left: 0px;
+  padding-right: 50px;
+  width: 45px;
+  position: relative;
+  padding-top: 14px;
+}
+
+.head {
+  display: flex;
+  align-content: center;
+  justify-self: center;
 }
 
 .nav-links {

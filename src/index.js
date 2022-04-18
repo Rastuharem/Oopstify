@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./pages/App";
 import MainPage from "./pages/MainPage";
-import Playlist from "./pages/Playlist"
+import PlaylistPage from "./pages/PlaylistPage"
 import reducers from "./reducers";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
@@ -21,9 +21,9 @@ const rooty = () => {
     >
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />}/>
+        <Route exact path="/" element={<App />}/>
         <Route path="/main" element={<MainPage/>}/>
-        <Route path="/playlist" element={<Playlist/>}/>
+        <Route path="/playlist" element={<PlaylistPage/>}/>
       </Routes>
       </BrowserRouter>
     </Provider>
