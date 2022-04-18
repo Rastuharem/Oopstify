@@ -15,6 +15,7 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
 }
+
 * {
     cursor: default;
 }
@@ -42,6 +43,7 @@ code {
     font-size: 1.6rem;
     display: none;
 }
+
 @media (max-width: 720px) {
     #root {
         display: none;

@@ -1,5 +1,5 @@
 import React from "react";
-import "./NavBar.css";
+import "../styles/NavBar.css";
 import metadata from "../data/metadata.json";
 import {OopstifySvg} from "../svg/index.js";
 
@@ -12,7 +12,7 @@ const NavBar = () => {
             <div className="app-header">{metadata.appName}</div>
             <div className="nav-links">
                 <a
-                    href="https://www.github.com/jessej-samuel/spotipy"
+                    href="https://www.github.com/Rastuharem/Oopstify"
                     target="_blank"
                     rel="noreferrer"
                 >

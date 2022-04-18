@@ -1,11 +1,11 @@
 import React from "react";
-import "./App.css";
-import NavBar from "./NavBar";
-import Player from "./Player";
-import SongList from "./SongList";
+import "../styles/App.css";
+import NavBar from "../components/NavBar";
+import Player from "../components/Player";
+import SongList from "../components/SongList";
 import songs from "../data/songs.json";
-import SongDetail from "./SongDetail";
-import SongListHeader from "./SongListHeader";
+import SongDetail from "../components/SongDetail";
+import SongListHeader from "../components/SongListHeader";
 
 for (let index = 0; index < songs.length; index++) {
     const song = songs[index];
