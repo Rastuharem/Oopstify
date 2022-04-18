@@ -12,7 +12,7 @@ const NavBar = () => {
                 <LinkBar/>
                 <div className="head">
                 <div className="fa-oopstify">
-                    <Link to="/main">
+                    <Link to="/">
                     {OopstifySvg}
                     </Link>
                 </div>

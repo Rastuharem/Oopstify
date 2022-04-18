@@ -7,18 +7,12 @@ const LinkBar = () => {
     <>
       <div className="container">
         <div className="linkbar">
-          <Link to="/main" className="link">
+          <Link to="/" className="link">
             Главная
           </Link>
           <Link to="/playlist" className="link">
               Плейлист
           </Link>
-          {
-            //<button className="link">Главная</button>
-          }
-          {
-            //<button className="link">Плейлист</button>
-          }
         </div>
       </div>
     </>

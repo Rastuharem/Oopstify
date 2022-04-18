@@ -7,7 +7,8 @@ import PlaylistPage from "./pages/PlaylistPage"
 import reducers from "./reducers";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import WelcomePage from "./pages/WelcomePage";
 
 
 const rooty = () => {
@@ -19,11 +20,12 @@ const rooty = () => {
           window.__REDUX_DEVTOOLS_EXTENSION__()
       )}
     >
+      <Navigate replace to="/welcome"></Navigate>
       <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<App />}/>
-        <Route path="/main" element={<MainPage/>}/>
-        <Route path="/playlist" element={<PlaylistPage/>}/>
+        <Route exact path="/" element={<MainPage/>}/>
+        <Route exact path="/welcome" element={<WelcomePage/>}/>
+        <Route exact path="/playlist" element={<PlaylistPage/>}/>
       </Routes>
       </BrowserRouter>
     </Provider>
