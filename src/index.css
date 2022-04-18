@@ -3,14 +3,6 @@ html {
     background-color: #141414;
 }
 
-body {
-    margin: 0;
-    font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-        "Droid Sans", "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
@@ -23,6 +15,24 @@ code {
 *::selection {
     background-color: rgb(15, 23, 42);
     color: #38bdf8;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+    font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 28px;
+    background-color: transparent;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 #root {
