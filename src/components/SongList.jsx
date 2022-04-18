@@ -1,4 +1,4 @@
-import "./SongList.css";
+import "../styles/SongList.css";
 import SongItem from "./SongItem";
 
 const SongList = ({ songs = [] }) => {

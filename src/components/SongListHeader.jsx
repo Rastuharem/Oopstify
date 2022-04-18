@@ -1,4 +1,4 @@
-import "./SongListHeader.css";
+import "../styles/SongListHeader.css";
 
 const SongListHeader = () => {
     return (

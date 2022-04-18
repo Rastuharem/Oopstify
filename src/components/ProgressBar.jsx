@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { setVolume } from "../actions";
-import "./ProgressBar.css";
+import "../styles/ProgressBar.css";
 
 class ProgressBar extends React.Component {
     constructor(props) {

@@ -1,4 +1,4 @@
-import "./Player.css";
+import "../styles/Player.css";
 import { useEffect, useRef, useState } from "react";
 import { connect, useDispatch } from "react-redux";
 import { forwardsSvg, backwardsSvg, shuffleSvg } from "../svg";
@@ -8,7 +8,6 @@ import SongTime from "./SongTime";
 
 const Player = ({
     selectedSongId,
-    defaultSong,
     playerState,
     songs,
     selectSongById,

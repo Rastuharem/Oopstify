@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./SongItem.css";
+import "../styles/SongItem.css";
 import { connect, useDispatch } from "react-redux";
 import { selectSong } from "../actions";
 

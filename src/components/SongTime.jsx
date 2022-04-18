@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import React from "react";
-import "./SongTime.css";
+import "../styles/SongTime.css";
 
 class SongTime extends React.Component {
     render() {

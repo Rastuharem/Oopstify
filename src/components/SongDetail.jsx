@@ -1,4 +1,4 @@
-import "./SongDetail.css";
+import "../styles/SongDetail.css";
 import { connect } from "react-redux";
 import { selectSong } from "../actions";
 
