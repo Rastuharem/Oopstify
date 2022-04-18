@@ -1,11 +1,14 @@
 import React from "react";
 import "./NavBar.css";
 import metadata from "../data/metadata.json";
+import {OopstifySvg} from "../svg/index.js";
 
 const NavBar = () => {
     return (
         <div className="navbar">
-            <i className="fab fa-spotify"></i>
+            <div className="fa-oopstify">
+                {OopstifySvg}
+            </div>
             <div className="app-header">{metadata.appName}</div>
             <div className="nav-links">
                 <a
