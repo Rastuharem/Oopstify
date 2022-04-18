@@ -2,10 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./pages/App";
+import MainPage from "./pages/MainPage";
+import Playlist from "./pages/Playlist"
 import reducers from "./reducers";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import { createRoot } from "react-dom/client";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 
 const rooty = () => {
   return (
@@ -16,7 +19,13 @@ const rooty = () => {
           window.__REDUX_DEVTOOLS_EXTENSION__()
       )}
     >
-      <App />
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}/>
+        <Route path="/main" element={<MainPage/>}/>
+        <Route path="/playlist" element={<Playlist/>}/>
+      </Routes>
+      </BrowserRouter>
     </Provider>
   );
 };
