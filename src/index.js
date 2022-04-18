@@ -5,6 +5,7 @@ import App from "./components/App";
 import reducers from "./reducers";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
+import { createRoot } from 'react-dom/client';
 
 const rooty = () => {
     
