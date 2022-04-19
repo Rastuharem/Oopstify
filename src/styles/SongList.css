@@ -4,10 +4,11 @@
     overflow-y: auto;
     overflow-x: hidden;
     padding-left: 2px;
+    border: 2px solid red;
 }
 
 #song-list::-webkit-scrollbar {
-    width: 0px;
+    width: 2px;
 }
 
 /* Track */
@@ -40,4 +41,6 @@
 
 .song-item.header > * {
     color: #eee !important;
+    border: 2px solid aqua;
+    height: fit-content;
 }

@@ -10,8 +10,8 @@ const LinkBar = () => {
           <Link to="/" className="link">
             Главная
           </Link>
-          <Link to="/playlist" className="link">
-              Плейлист
+          <Link to="/playlist" className="link edit">
+              Редактирование
           </Link>
         </div>
       </div>
