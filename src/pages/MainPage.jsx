@@ -5,7 +5,6 @@ import Player from "../components/Player";
 import SongList from "../components/SongList";
 import songs from "../data/songs.json";
 import SongDetail from "../components/SongDetail";
-import SongListHeader from "../components/SongListHeader";
 
 for (let index = 0; index < songs.length; index++) {
     const song = songs[index];
@@ -16,7 +15,6 @@ const MainPage = () => {
     return (
         <>
             <NavBar />
-            <SongListHeader />
             <SongDetail />
             <SongList songs={songs} />
             <Player />

@@ -4,7 +4,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     padding-left: 2px;
-    border: 2px solid red;
+    height: 100%;
 }
 
 #song-list::-webkit-scrollbar {
@@ -33,14 +33,12 @@
     }
 }
 
-.song-item.header:hover {
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    background-color: initial;
+.empty-list > h1 {
+    text-align: center;
+    font-size: 35px;
 }
 
-.song-item.header > * {
-    color: #eee !important;
-    border: 2px solid aqua;
-    height: fit-content;
+.empty-list > h2 {
+    text-align: center;
+    font-size: 28px;
 }

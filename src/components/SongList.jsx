@@ -1,17 +1,29 @@
 import "../styles/SongList.css";
 import SongItem from "./SongItem";
+import SongListHeader from "./SongListHeader";
 
 const SongList = ({ songs = [] }) => {
-
 
   const songTags = songs.map((song, index) => {
     return <SongItem song={song} key={index} index={index} />;
   });
 
-
   return (
     <>
-    <div id="song-list">{songTags}</div>
+      {songs.length !== 0 ? (
+        <>
+          <SongListHeader/>
+          <div id="song-list">{songTags}</div>
+        </>
+      ) : (
+        <div className="empty-list">
+          <h1>Ваш плейлист пустует :(</h1>
+          <h2>
+            Но не волнуйтесь, вы всегда можете загрузить свою музыку в разделе
+            "редактирование"!
+          </h2>
+        </div>
+      )}
     </>
   );
 };
