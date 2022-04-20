@@ -75,6 +75,7 @@ const Player = ({
         document.getElementById("focus-link").click();
         window.history.pushState({}, "", "/");
     }, [selectedSongId, dispatch]);
+
     useEffect(() => {
         dispatch({ type: "PLAYER_STATE_SELECTED", payload: 0 });
         audioRef.current.pause();
