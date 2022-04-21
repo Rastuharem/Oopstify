@@ -1,18 +1,30 @@
+import {useEffect, useState } from "react";
 import "../styles/SongList.css";
 import SongItem from "./SongItem";
 import SongListHeader from "./SongListHeader";
 
-const SongList = ({ songs = [] }) => {
+const SongList = ({songs = []}) => {
 
-  const songTags = songs.map((song, index) => {
-    return <SongItem song={song} key={index} index={index} />;
-  });
+  const [songFilt, setSongFilt] = useState([...songs])
+
+  let songTags;
+
+  useEffect(()=>{
+    songTags = songFilt.map((song, index) => {
+      return <SongItem song={song} key={index} index={index} />;
+    });
+    console.log(songFilt);
+  }, [songFilt])
+
+  const songListChange = (newSongFilt) => {
+    setSongFilt(newSongFilt);
+  }
 
   return (
     <>
       {songs.length !== 0 ? (
         <>
-          <SongListHeader/>
+          <SongListHeader songs = {songs} setNewSongList = {songListChange} />
           <div id="song-list">{songTags}</div>
         </>
       ) : (

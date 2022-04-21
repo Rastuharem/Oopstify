@@ -1,20 +1,49 @@
 import "../styles/SongListHeader.css";
-import { useEffect, useState } from "react";
+import {useEffect, useState } from "react";
 
 
-const SongListHeader = () => {
+const SongListHeader = (
+    { 
+        songs = [],
+        setNewSongList 
+    }
+) => {
 
+    const [filteredSongs, setFilteredSongs] = useState(songs);
     const [SelectedSort, setSelectedSort] = useState('index');
     const [Direction, setDirection] = useState('down');
 
+    useEffect(()=>{
+      setNewSongList(filteredSongs);
+    }, [setNewSongList, filteredSongs])
+
     useEffect(()=> {
-        sortMusic(SelectedSort, Direction);
-    }, [SelectedSort, Direction]);
-    
-    const sortMusic = (sort, direction) => {
-        console.log(sort);
-        console.log(direction);
-    }
+        console.log(SelectedSort, Direction);
+        let bufSongs = [];
+      switch (SelectedSort) {
+        case "index":
+          bufSongs = [...songs].sort((a, b) =>
+            toString(a["id"]).localeCompare(toString(b["id"]))
+          );
+          break;
+        case "title":
+          bufSongs = [...songs].sort((a, b) =>
+            a["name"].localeCompare(b["name"])
+          );
+          break;
+        case "author":
+          bufSongs = [...songs].sort((a, b) =>
+            a["author"].localeCompare(b["author"])
+          );
+          break;
+          default:
+              break;
+      }
+      if (Direction === "up") {
+        bufSongs.reverse();
+      }
+      setFilteredSongs(bufSongs);
+    }, [songs, SelectedSort, Direction]);
 
     const indexClick = () => {
         setSelectedSort('index');
