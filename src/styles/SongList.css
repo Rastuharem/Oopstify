@@ -1,0 +1,44 @@
+#song-list {
+    grid-column: 6/13;
+    grid-row: 3/8;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-left: 2px;
+    height: 99%;
+}
+
+#song-list::-webkit-scrollbar {
+    width: 2px;
+}
+
+/* Track */
+#song-list::-webkit-scrollbar-track {
+    background: rgb(15, 23, 42);
+}
+
+/* Handle */
+#song-list::-webkit-scrollbar-thumb {
+    background: rgb(148, 163, 184);
+    border-radius: 4px;
+}
+
+/* Handle on hover */
+#song-list::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+}
+
+@media (max-width: 760px) {
+    #song-list {
+        grid-column: 1/13;
+    }
+}
+
+.empty-list > h1 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.empty-list > h2 {
+    text-align: center;
+    font-size: 28px;
+}
