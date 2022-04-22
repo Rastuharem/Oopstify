@@ -40,6 +40,7 @@ const SongDetail = ({
         backgroundImage: `url(
           ${songs[selectedSongId].links.images[1].url}
         )`,
+        backgroundSize: 'contain',
       }}
     >
       {songData()}

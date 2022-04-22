@@ -609,7 +609,7 @@
     },
     {
         "name": "Let Me Love You (feat. Justin Bieber)",
-        "author": "DJ Snake ",
+        "author": "DJ Snake",
         "url": "https://cdn.discordapp.com/attachments/775740994595323954/782129492180860928/DJ_Snake_-_Let_Me_Love_You_ft._Justin_Bieber_OffiMP3_128K.mp3",
         "id": 40,
         "links": {
@@ -1579,6 +1579,214 @@
                 },
                 {
                     "url": "https://geo-media.beatport.com/image_size/1400x1400/5d85cada-cc45-4b0e-b94b-1fa3ecd2099c.jpg"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Emoboy303 (SIDE)",
+        "author": "Leotrix",
+        "url": "https://deliciouspeaches.com/get/music/20200901/Leotrix_-_Emoboy303_SIDE_70780483.mp3",
+        "id": 104,
+        "links": {
+            "images": [
+                {
+                    "url": "https://www.youredm.com/wp-content/uploads/2017/12/LEOTRIX-Different-3.jpg"
+                },
+                {
+                    "url": "https://geo-media.beatport.com/image_size/1400x1400/77fdcb11-dc0a-4cdc-a548-54786f2685c0.jpg"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Southside",
+        "author": "DJ Snake & Eptic",
+        "url": "https://s2.deliciouspeaches.com/get/music/20190323/DJ_Snake_Eptic_-_SouthSide_62986876.mp3",
+        "id": 105,
+        "links": {
+            "images": [
+                {
+                    "url": "https://i.scdn.co/image/ab6761610000e5ebf2855e25f1d9c8a20bcc85ae"
+                },
+                {
+                    "url": "https://fuxwithit.com/wp-content/uploads/2019/03/djsnakeeptic.jpg"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Spotlight",
+        "author": "Marshmello & Lil Peep",
+        "url": "https://ds.cdn2.deliciouspeaches.com/get/music/20180115/Marshmello_Lil_Peep_-_Spotlight_52718328.mp3",
+        "id": 106,
+        "links": {
+            "images": [
+                {
+                    "url": "https://i.scdn.co/image/ab6761610000e5eba91af711541f8807ed7f0676"
+                },
+                {
+                    "url": "https://sun9-78.userapi.com/s/v1/if1/4JAp0irgZYtAUT8-zDJgJQwxGLXRRNPTy56CjF1mx7jBAMocdMhAvR6Ir3Louo0eJOLwCm2s.jpg?size=1000x1000&quality=96&type=album"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Eartquake",
+        "author": "Marshmello & Tynan",
+        "url": "https://cdn3.deliciouspeaches.com/get/music/20190710/Marshmello_Tynan_-_Earthquake_65347881.mp3",
+        "id": 107,
+        "links": {
+            "images": [
+                {
+                    "url": "https://i.scdn.co/image/ab6761610000e5eba91af711541f8807ed7f0676"
+                },
+                {
+                    "url": "https://avatars.yandex.net/get-music-content/139444/b42e4d15.a.7838054-1/m1000x1000?webp=false"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Falling To Pieces",
+        "author": "Marshmello & Crankdat",
+        "url": "https://cdn14.deliciouspeaches.com/get/music/20190710/Marshmello_Crankdat_-_Falling_To_Pieces_65347883.mp3",
+        "id": 108,
+        "links": {
+            "images": [
+                {
+                    "url": "https://i.scdn.co/image/ab6761610000e5eba91af711541f8807ed7f0676"
+                },
+                {
+                    "url": "https://avatars.yandex.net/get-music-content/139444/b42e4d15.a.7838054-1/m1000x1000?webp=false"
+                }
+            ]
+        }
+    },
+    {
+        "name": "House Party",
+        "author": "Marshmello & Subtronics",
+        "url": "https://cdn8.deliciouspeaches.com/get/music/20210611/Marshmello_Subtronics_-_House_Party_72997213.mp3",
+        "id": 108,
+        "links": {
+            "images": [
+                {
+                    "url": "https://i.scdn.co/image/ab6761610000e5eba91af711541f8807ed7f0676"
+                },
+                {
+                    "url": "https://s.mxmcdn.net/images-storage/albums4/7/2/9/1/9/6/55691927_800_800.jpg"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Candy Kid",
+        "author": "Marshmello & SIPPY",
+        "url": "https://s2.deliciouspeaches.com/get/music/20210611/Marshmello_SIPPY_-_Candy_Kid_72997214.mp3",
+        "id": 109,
+        "links": {
+            "images": [
+                {
+                    "url": "https://i.scdn.co/image/ab6761610000e5eba91af711541f8807ed7f0676"
+                },
+                {
+                    "url": "https://s.mxmcdn.net/images-storage/albums4/7/2/9/1/9/6/55691927_800_800.jpg"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Hitta",
+        "author": "Marshmello, Eptic & Juicy J",
+        "url": "https://s2.deliciouspeaches.com/get/music/20210611/Marshmello_Eptic_Juicy_J_-_Hitta_72997212.mp3",
+        "id": 110,
+        "links": {
+            "images": [
+                {
+                    "url": "https://i.scdn.co/image/ab6761610000e5eba91af711541f8807ed7f0676"
+                },
+                {
+                    "url": "https://s.mxmcdn.net/images-storage/albums4/7/2/9/1/9/6/55691927_800_800.jpg"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Shockwave",
+        "author": "Marshmello",
+        "url": "https://s2.deliciouspeaches.com/get/music/20210611/Marshmello_-_Shockwave_72997216.mp3",
+        "id": 111,
+        "links": {
+            "images": [
+                {
+                    "url": "https://i.scdn.co/image/ab6761610000e5eba91af711541f8807ed7f0676"
+                },
+                {
+                    "url": "https://s.mxmcdn.net/images-storage/albums4/7/2/9/1/9/6/55691927_800_800.jpg"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Fairytale",
+        "author": "Marshmello",
+        "url": "https://s2.deliciouspeaches.com/get/music/20210611/Marshmello_-_Fairytale_72997206.mp3",
+        "id": 112,
+        "links": {
+            "images": [
+                {
+                    "url": "https://i.scdn.co/image/ab6761610000e5eba91af711541f8807ed7f0676"
+                },
+                {
+                    "url": "https://s.mxmcdn.net/images-storage/albums4/7/2/9/1/9/6/55691927_800_800.jpg"
+                }
+            ]
+        }
+    },
+    {
+        "name": "What's Going Down",
+        "author": "Stonebank",
+        "url": "https://s2.deliciouspeaches.com/get/music/20191008/Stonebank_-_Whats_Going_Down_66882672.mp3",
+        "id": 113,
+        "links": {
+            "images": [
+                {
+                    "url": "https://i1.sndcdn.com/artworks-000077693852-on84f5-t500x500.jpg"
+                },
+                {
+                    "url": "https://avatars.yandex.net/get-music-content/103235/bd9dfce8.a.5241967-1/m1000x1000?webp=false"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Body Moving",
+        "author": "Stonebank",
+        "url": "https://s2.deliciouspeaches.com/get/music/20171120/Stonebank_-_Body_Moving_50852022.mp3",
+        "id": 114,
+        "links": {
+            "images": [
+                {
+                    "url": "https://i1.sndcdn.com/artworks-000077693852-on84f5-t500x500.jpg"
+                },
+                {
+                    "url": "https://geo-media.beatport.com/image_size/1400x1400/076f0256-1789-4cb6-b17a-33c1133be47a.jpg"
+                }
+            ]
+        }
+    },
+    {
+        "name": "Unity",
+        "author": "Stonebank, Rogue & Slippy",
+        "url": "https://s2.deliciouspeaches.com/get/music/20190524/Rogue_Stonebank_Slippy_-_Unity_64463016.mp3",
+        "id": 115,
+        "links": {
+            "images": [
+                {
+                    "url": "https://i1.sndcdn.com/artworks-000077693852-on84f5-t500x500.jpg"
+                },
+                {
+                    "url": "https://lastfm.freetls.fastly.net/i/u/ar0/043991531b81c399a3a2c48216106560.jpg"
                 }
             ]
         }
