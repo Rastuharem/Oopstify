@@ -11,10 +11,11 @@ const MainPage = () => {
 
   useEffect(() => {
     for (let index = 0; index < songs.length; index++) {
-      const song = songs[index];
+      const song = Playlist[index];
       song.id = index;
-      console.log(Playlist)
+      console.log(song);
     }
+    console.log(Playlist)
   }, [Playlist]);
 
   const changePlaylistCauseFilter = (newPlaylist) => {
@@ -24,9 +25,9 @@ const MainPage = () => {
   return (
     <>
       <NavBar />
-      <SongDetail />
-      <SongList songs={songs} changePlaylist={changePlaylistCauseFilter} />
-      <Player songs={Playlist}/>
+      <SongDetail songs={Playlist}/>
+      <SongList songs={Playlist} changePlaylist={changePlaylistCauseFilter} />
+      <Player songs={Playlist} />
       <a href="#focused" id="focus-link" hidden>
         Go to playing element
       </a>

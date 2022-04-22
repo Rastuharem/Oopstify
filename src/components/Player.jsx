@@ -9,7 +9,7 @@ import SongTime from "./SongTime";
 const Player = ({
   selectedSongId,
   playerState,
-  songs,
+  songs =[],
   selectSongById,
   volume,
 }) => {
@@ -24,6 +24,7 @@ const Player = ({
       document.getElementsByClassName("main-control")[0].click();
     }
   };
+  
   const spaceUpFunc = (event) => {
     if (event.keyCode === 32 && clicked) {
       clicked = false;
@@ -121,7 +122,7 @@ const Player = ({
             selectSongById(Math.round(Math.random() * songs.length))
           }
           else {
-            if(selectSongById === songs.length-1) {
+            if(selectedSongId === songs.length) {
               selectSongById(0)
             }
             else {
@@ -158,11 +159,8 @@ const mapStateToProps = (state) => {
     selectedSongId: state.selectedSongId,
     defaultSong: state.songs[0],
     playerState: state.playerState,
-    songs: state.songs,
     volume: state.volume,
   };
 };
 
-export default connect(mapStateToProps, { setPlayerState, selectSongById })(
-  Player
-);
+export default connect(mapStateToProps, { setPlayerState, selectSongById })(Player);

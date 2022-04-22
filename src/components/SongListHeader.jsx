@@ -2,29 +2,29 @@ import "../styles/SongListHeader.css";
 import { useEffect, useState } from "react";
 
 const SongListHeader = ({ songs = [], setNewSongList }) => {
-  const [filteredSongs, setFilteredSongs] = useState(songs);
+  const [filteredSongs, setFilteredSongs] = useState([...songs]);
   const [SelectedSort, setSelectedSort] = useState("index");
   const [Direction, setDirection] = useState("down");
 
   useEffect(() => {
     setNewSongList(filteredSongs);
-  }, [setNewSongList, filteredSongs]);
+  }, [filteredSongs, setNewSongList]);
 
   useEffect(() => {
     let bufSongs = [];
     switch (SelectedSort) {
       case "index":
-        bufSongs = [...songs].sort((a, b) =>
+        bufSongs = [...filteredSongs].sort((a, b) =>
           toString(a["id"]).localeCompare(toString(b["id"]))
         );
         break;
       case "title":
-        bufSongs = [...songs].sort((a, b) =>
+        bufSongs = [...filteredSongs].sort((a, b) =>
           a["name"].localeCompare(b["name"])
         );
         break;
       case "author":
-        bufSongs = [...songs].sort((a, b) =>
+        bufSongs = [...filteredSongs].sort((a, b) =>
           a["author"].localeCompare(b["author"])
         );
         break;
@@ -35,7 +35,7 @@ const SongListHeader = ({ songs = [], setNewSongList }) => {
       bufSongs.reverse();
     }
     setFilteredSongs(bufSongs);
-  }, [songs, SelectedSort, Direction]);
+  }, [SelectedSort, Direction]);
 
   const indexClick = () => {
     setSelectedSort("index");
@@ -52,6 +52,10 @@ const SongListHeader = ({ songs = [], setNewSongList }) => {
   const selectorClick = () => {
     Direction === "down" ? setDirection("up") : setDirection("down");
   };
+
+  useEffect(()=>{
+    console.log(Direction)
+  },[Direction])
 
   return (
     <div className="song-item header">
