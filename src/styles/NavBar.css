@@ -8,8 +8,12 @@
   flex-direction: row;
   position: sticky;
   grid-column: 1/13;
+  height: 120px;
   box-shadow: 0px 2px 2px rgb(10, 10, 10);
   z-index: 2;
+  width: 100%;
+  overflow-x: hidden;
+
 }
 
 .app-header {
