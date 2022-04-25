@@ -9,7 +9,7 @@ import SongTime from "./SongTime";
 const Player = ({
   selectedSongId,
   playerState,
-  songs =[],
+  songs = [],
   selectSongById,
   volume,
 }) => {
@@ -78,7 +78,6 @@ const Player = ({
   useEffect(() => {
     dispatch({ type: "PLAYER_STATE_SELECTED", payload: 1 });
     audioRef.current.play();
-    // console.log(audioRef.current.duration);
     document.getElementById("focus-link").click();
     window.history.pushState({}, "", "/");
   }, [selectedSongId, dispatch]);
@@ -90,13 +89,12 @@ const Player = ({
 
   return (
     <div id="player">
-      <SongTime />
+      <SongTime audio={audioRef}/>
       <div
         className="control"
         id={shuffled ? `active` : null}
         onClick={() => {
           setShuffled(!shuffled);
-          // console.log("shuffle: " + !shuffled);
         }}
       >
         {shuffleSvg}
@@ -117,7 +115,7 @@ const Player = ({
         controls
         src={songs[selectedSongId].url}
         preload="false"
-        //preload="true"
+        //preload
         onEnded={() => {
           if(shuffled) {
             selectSongById(Math.round(Math.random() * songs.length))

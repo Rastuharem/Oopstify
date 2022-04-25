@@ -4,6 +4,8 @@
     background-color: #333333;
     margin-top: 1px;
     display: flex;
+    opacity: 0.6;
+    animation: disappear 0.5s ease forwards;
 }
 
 #completed {
@@ -12,10 +14,32 @@
     background-color: #2a8eb9;
 }
 
-#divider {
+.divider {
     position: absolute;
     height: 4px;
-    width: 4px;
-    background-color: red;
+    width: 6px;
+    background-color: #ffffff;
     overflow: hidden;
+}
+
+#music-timer:hover {
+    animation: appear 0.5s ease forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes disappear {
+    100% {
+        opacity: 0.6;
+    }
+    0% {
+        opacity: 1;
+    }
 }

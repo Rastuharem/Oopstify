@@ -14,12 +14,13 @@
     background: white; /* Grey background */
     outline: none;
     border-radius: 99999px;
-    opacity: 0.7;
+    opacity: 0.6;
+    animation: disappearSlider 0.5s ease forwards;
 }
 
 /* Mouse-over effects */
 .slider:hover {
-    animation: scaleSlider 0.5s ease forwards;
+    animation: appearSlider 0.5s ease forwards;
 }
 
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
@@ -43,11 +44,20 @@
     font-size: 0.8rem;
 }
 
-@keyframes scaleSlider {
+@keyframes appearSlider {
     0% {
-        opacity: 0.7;
+        opacity: 0.6;
     }
     100% {
+        opacity: 1;
+    }
+}
+
+@keyframes disappearSlider {
+    100% {
+        opacity: 0.6;
+    }
+    0% {
         opacity: 1;
     }
 }

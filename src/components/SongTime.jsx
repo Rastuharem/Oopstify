@@ -2,17 +2,24 @@ import { connect } from "react-redux";
 import React from "react";
 import "../styles/SongTime.css";
 
-const SongTime = ({ currentLocation, duration }) => {
+const SongTime = ({ currentLocation, duration, audio }) => {
 
-  const changeSongLocation = (e) => {
-    const ProgressBar = document.getElementById("completed");
-    const Divider = document.getElementById("divider");
-    Divider.style.left = `${e.screenX}%`;
-    console.log("click");
+  const changeSongTime = (e) => {
+    const musicTimer = document.getElementById('music-timer')
+    const offset = musicTimer.getBoundingClientRect();
+    let mouseClickCoords = Math.floor(((e.screenX - offset.left) / offset.width * 10000)-250) / 100;
+    if (mouseClickCoords < 1) {
+      mouseClickCoords = 0
+    }
+    if (mouseClickCoords > 99) {
+      mouseClickCoords = 100
+    }
+    audio.current.currentTime = (mouseClickCoords * duration) / 100;
+    console.log((mouseClickCoords * duration) / 100);
   };
 
   return (
-    <div id="music-timer" onClick={changeSongLocation}>
+    <div id="music-timer" onClick={changeSongTime}>
       <div
         id="completed"
         style={{
@@ -20,12 +27,11 @@ const SongTime = ({ currentLocation, duration }) => {
         }}
       ></div>
       <span
-        id="divider"
-        tabIndex={0}
-        style={{
-          left: `${(currentLocation / duration) * 100}%`,
-        }}
-      ></span>
+      tabIndex={0}
+      className="divider"
+      style={{
+        left: `${(currentLocation / duration) * 100}%`,
+      }} />
     </div>
   );
 };
