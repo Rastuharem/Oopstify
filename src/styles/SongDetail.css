@@ -7,7 +7,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 30% 1fr 1fr 1fr;
   background-size: cover;
-  opacity: 0.7;
+  opacity: 0.6;
   background-color: "black";
   transition: all 0.1s ease-in-out;
   width: 93%;
@@ -74,7 +74,7 @@
 
 @keyframes hoverImage {
   0% {
-    opacity: 0.7;
+    opacity: 0.6;
     transform: scale(0.9);
   }
   100% {
@@ -85,7 +85,7 @@
 
 @keyframes unhoverImage {
   100% {
-    opacity: 0.7;
+    opacity: 0.6;
     transform: scale(0.9);
   }
   0% {

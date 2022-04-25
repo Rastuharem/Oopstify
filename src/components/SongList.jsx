@@ -6,11 +6,10 @@ import SongListHeader from "./SongListHeader";
 const SongList = (
   {
     songs = [],
-    changePlaylist
+    changePlaylist,
+    originalPlaylist,
   }
   ) => {
-
-  //const [songFilt, setSongFilt] = useState(songs);
 
   let songTags = songs.map((song, index) => {
     return <SongItem song={song} key={index} index={index} />;
@@ -20,15 +19,11 @@ const SongList = (
     changePlaylist(newSongFilt);
   };
 
-  // useEffect(()=> {
-  //   changePlaylist(songFilt)
-  // }, [songFilt, changePlaylist])
-
   return (
     <>
       {songs.length !== 0 ? (
         <>
-          <SongListHeader songs={[...songs]} setNewSongList={songListChange} />
+          <SongListHeader songs={[...songs]} setNewSongList={songListChange} originalPlaylist={originalPlaylist}/>
           <div id="song-list">{songTags}</div>
         </>
       ) : (

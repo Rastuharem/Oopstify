@@ -13,9 +13,7 @@ const MainPage = () => {
     for (let index = 0; index < songs.length; index++) {
       const song = Playlist[index];
       song.id = index;
-      console.log(song);
     }
-    console.log(Playlist)
   }, [Playlist]);
 
   const changePlaylistCauseFilter = (newPlaylist) => {
@@ -26,7 +24,7 @@ const MainPage = () => {
     <>
       <NavBar />
       <SongDetail songs={Playlist}/>
-      <SongList songs={Playlist} changePlaylist={changePlaylistCauseFilter} />
+      <SongList songs={Playlist} changePlaylist={changePlaylistCauseFilter} originalPlaylist={songs} />
       <Player songs={Playlist} />
       <a href="#focused" id="focus-link" hidden>
         Go to playing element

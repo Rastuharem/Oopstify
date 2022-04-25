@@ -116,7 +116,8 @@ const Player = ({
         id="main-track"
         controls
         src={songs[selectedSongId].url}
-        preload="true"
+        preload="false"
+        //preload="true"
         onEnded={() => {
           if(shuffled) {
             selectSongById(Math.round(Math.random() * songs.length))

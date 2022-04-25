@@ -1,7 +1,7 @@
 import "../styles/SongListHeader.css";
 import { useEffect, useState } from "react";
 
-const SongListHeader = ({ songs = [], setNewSongList }) => {
+const SongListHeader = ({ songs = [], setNewSongList, originalPlaylist}) => {
   const [filteredSongs, setFilteredSongs] = useState([...songs]);
   const [SelectedSort, setSelectedSort] = useState("index");
   const [Direction, setDirection] = useState("down");
@@ -14,7 +14,7 @@ const SongListHeader = ({ songs = [], setNewSongList }) => {
     let bufSongs = [];
     switch (SelectedSort) {
       case "index":
-        bufSongs = [...filteredSongs].sort((a, b) =>
+        bufSongs = [...originalPlaylist].sort((a, b) =>
           toString(a["id"]).localeCompare(toString(b["id"]))
         );
         break;
@@ -34,6 +34,7 @@ const SongListHeader = ({ songs = [], setNewSongList }) => {
     if (Direction === "up") {
       bufSongs.reverse();
     }
+    console.log(bufSongs)
     setFilteredSongs(bufSongs);
   }, [SelectedSort, Direction]);
 
