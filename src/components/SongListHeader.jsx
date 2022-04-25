@@ -1,5 +1,6 @@
 import "../styles/SongListHeader.css";
 import { useEffect, useState } from "react";
+import { ArrowSvg } from "../svg";
 
 const SongListHeader = ({ songs = [], setNewSongList, originalPlaylist}) => {
   const [filteredSongs, setFilteredSongs] = useState([...songs]);
@@ -34,9 +35,8 @@ const SongListHeader = ({ songs = [], setNewSongList, originalPlaylist}) => {
     if (Direction === "up") {
       bufSongs.reverse();
     }
-    console.log(bufSongs)
     setFilteredSongs(bufSongs);
-  }, [SelectedSort, Direction]);
+  }, [SelectedSort, Direction, originalPlaylist]);
 
   const indexClick = () => {
     setSelectedSort("index");
@@ -70,7 +70,7 @@ const SongListHeader = ({ songs = [], setNewSongList, originalPlaylist}) => {
         Author
       </button>
       <button onClick={selectorClick} className="btn selector">
-        <i className="fas fa-chevron-down"></i>
+        {ArrowSvg}
       </button>
     </div>
   );

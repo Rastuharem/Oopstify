@@ -34,7 +34,7 @@ const Player = ({
   useEffect(() => {
     document.addEventListener("keydown", spaceDownFunc);
     document.addEventListener("keyup", spaceUpFunc);
-  }, []);
+  });
 
   if (selectedSongId < 0 || selectedSongId > songs.length - 1) {
     selectSongById(0);
@@ -59,19 +59,24 @@ const Player = ({
   };
 
   const onBackwardClick = () => {
-    if (selectedSongId > 0) {
-      selectSongById(selectedSongId - 1);
-    }
-    else {
-      selectSongById(songs.length-1)
+    if (shuffled) {
+      selectSongById(Math.round(Math.random() * songs.length));
+    } else
+      if (selectedSongId > 0) {
+        selectSongById(selectedSongId - 1);
+      } else {
+        selectSongById(songs.length - 1);
     }
   };
+  
   const onForwardClick = () => {
-    if (selectedSongId < songs.length - 1) {
-      selectSongById(selectedSongId + 1);
-    }
-    else {
-      selectSongById(0)
+    if (shuffled) {
+      selectSongById(Math.round(Math.random() * songs.length));
+    } else
+      if (selectedSongId < songs.length - 1) {
+        selectSongById(selectedSongId + 1);
+      } else {
+        selectSongById(0)
     }
   };
 

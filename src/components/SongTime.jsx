@@ -21,7 +21,7 @@ const SongTime = ({ currentLocation, duration, audio }) => {
   return (
     <div id="music-timer" onClick={changeSongTime}>
       <div
-        id="completed"
+        className="completed"
         style={{
           width: `${(currentLocation / duration) * 100}%`,
         }}

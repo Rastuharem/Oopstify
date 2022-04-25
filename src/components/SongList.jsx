@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import "../styles/SongList.css";
 import SongItem from "./SongItem";
 import SongListHeader from "./SongListHeader";
