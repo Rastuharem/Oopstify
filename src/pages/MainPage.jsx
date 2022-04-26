@@ -26,7 +26,8 @@ const MainPage = () => {
       <SongDetail songs={Playlist}/>
       <SongList songs={Playlist} changePlaylist={changePlaylistCauseFilter} originalPlaylist={songs} />
       <Player songs={Playlist} />
-      <a href="#focused" id="focus-link" hidden>
+      
+      <a href = "#focused" id = "focus-link" hidden>
         Go to playing element
       </a>
     </>

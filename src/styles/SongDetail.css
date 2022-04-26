@@ -14,7 +14,7 @@
   height: 100%;
   transform: scale(0.9);
   overflow: hidden;
-  animation: unhoverImage 1s ease forwards;
+  animation: unhoverImage 0.5s ease forwards;
 }
 
 .now-playing > .header {
@@ -69,7 +69,7 @@
 }
 
 .song-detail:hover {
-  animation: hoverImage 1s ease forwards;
+  animation: hoverImage 0.5s ease forwards;
 }
 
 @keyframes hoverImage {
@@ -86,11 +86,11 @@
 @keyframes unhoverImage {
   100% {
     opacity: 0.6;
-    transform: scale(0.9);
+    transform: scale(0.9)
   }
   0% {
-    opacity: 1;
-    transform: scale(1);
+    opacity: inherit;
+    transform: inherit;
   }
 }
 

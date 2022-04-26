@@ -15,7 +15,6 @@ const SongTime = ({ currentLocation, duration, audio }) => {
       mouseClickCoords = 100
     }
     audio.current.currentTime = (mouseClickCoords * duration) / 100;
-    console.log((mouseClickCoords * duration) / 100);
   };
 
   return (

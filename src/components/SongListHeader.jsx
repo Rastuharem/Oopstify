@@ -54,10 +54,6 @@ const SongListHeader = ({ songs = [], setNewSongList, originalPlaylist}) => {
     Direction === "down" ? setDirection("up") : setDirection("down");
   };
 
-  useEffect(()=>{
-    console.log(Direction)
-  },[Direction])
-
   return (
     <div className="song-item header">
       <button onClick={indexClick} className="btn index">
