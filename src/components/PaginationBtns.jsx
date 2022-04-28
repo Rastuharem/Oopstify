@@ -1,12 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/PaginationBtns.css"
+import usePagination from "../hooks/usePagination";
 
-const PaginationBtns = ({page, totalPages, prevPage, nextPage, setPage}) => {
+const PaginationBtns = ({contentPerPage, length, setFirstIndex, setLastIndex}) => {
+
+  const {
+    firstContentIndex,
+    lastContentIndex,
+    nextPage,
+    prevPage,
+    page,
+    setPage,
+    totalPages,
+  } = usePagination({
+    contentPerPage: contentPerPage,
+    length: length,
+  });
+
+  useEffect(()=>{
+    setFirstIndex(firstContentIndex)
+  }, [firstContentIndex, setFirstIndex])
+
+  useEffect(()=>{
+    setLastIndex(lastContentIndex)
+  }, [lastContentIndex, setLastIndex])
+
   return (
     <div className="pagination">
-      <p className="text">
+       {/* <p className="text">
         {page}/{totalPages}
-      </p>
+      </p> */}
       <button onClick={prevPage} className="page">
         &larr;
       </button>

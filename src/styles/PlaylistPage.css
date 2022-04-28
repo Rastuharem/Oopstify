@@ -1,0 +1,62 @@
+* {
+    color: white;
+}
+
+.textContainer {
+    height: 90%;
+    display: grid;
+    grid-row: 2/3;
+    grid-column: 1/13;
+    align-items: center;
+    justify-content: center;
+}
+
+.textContainer > h1 {
+    color: white;
+    font-size: 50px;
+    text-shadow: 1px 1px 4px black;
+    position: absolute;
+    margin: auto;
+    justify-self: center;
+    opacity: 0;
+    animation: appear 1.7s ease 0.1s forwards;
+}
+
+.formContainer {
+    display: grid;
+    grid-row: 3/9;
+    grid-column: 1/6;
+    margin-left: 10px;
+    justify-content: left;
+    align-content: flex-start;
+    padding-left: 100px;
+}
+
+.formContainer > h2 {
+    color: #38bdf8;
+    font-size: 40px;
+}
+
+.musicForm {
+    width: 500px;
+    height: 300px;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgb(255, 255, 255);
+}
+
+.fileInput {
+    border: 1px solid red;
+    padding: 20px;
+}
+
+@keyframes appear {
+    0% {
+        transform: translateY(900px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
