@@ -3,7 +3,16 @@ import "../styles/UploadSongForm.css"
 import { UploadSvg } from "../svg";
 import songs from "../data/songs.json"
 
+
+
 const UploadSongForm = () => {
+
+    const newSong = Object.assign({}, songs[0]);
+    for(let keys in newSong) {
+        newSong[keys] = "";
+    }
+
+    let SongFields = [];
 
     const showUploadedFile = () => {
         const input = document.getElementById("input__file");
@@ -19,14 +28,15 @@ const UploadSongForm = () => {
     }
 
     const showSongOption = () => {
-        const songSample = songs[0];
-        const songFields = [];
-        for (let key in songSample) {
-            songFields.push(key);
+        for (let key in newSong) {
+            SongFields.push([key, newSong[key]]);
         }
-        console.log(songFields);
-        
+        console.log(SongFields[SongFields.length-1]);
     }
+
+    //const [authorImg, albumImg] = [SongFields["links"]["images"][0], SongFields["links"]["images"][1]]
+
+    //const FieldsInputs = SongFields.map
       
     return(
         <form
@@ -57,14 +67,13 @@ const UploadSongForm = () => {
                 <div className="filePathContainer">
                     <h1>Selected file: </h1>
                     <label id="FilePath"></label>
-
-
-
-
+                </div>
+                <div className="songFieldsContainer">
+                    {SongFields}
                 </div>
             </div>
           <div className="senderContainer">
-            <input type="submit" value="Upload" id="SendBtn" hidden="false" />
+            <input type="submit" value="Upload" id="SendBtn" hidden={false} />
             </div>
         </form>
     );
