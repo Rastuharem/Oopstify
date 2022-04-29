@@ -1,32 +1,33 @@
 #music-timer {
+    overflow: hidden;
     width: 100%;
-    height: 4px;
+    height: 5px;
     background-color: #333333;
     margin-top: 1px;
-    display: flex;
+    display: inline-flex;
     opacity: 0.6;
-    animation: disappear 0.5s ease forwards;
+    animation: TimelineDisappear 0.5s ease forwards;
 }
 
 .completed {
-    height: 4px;
+    height: 100%;
     width: 60%;
     background-color: #2a8eb9;
+    overflow: hidden;
 }
 
 .divider {
-    position: absolute;
-    height: 4px;
+    height: inherit;
     width: 6px;
     background-color: #ffffff;
     overflow: hidden;
 }
 
 #music-timer:hover {
-    animation: appear 0.5s ease forwards;
+    animation: TimelineAppear 0.5s ease forwards;
 }
 
-@keyframes appear {
+@keyframes TimelineAppear {
     0% {
         opacity: 0.6;
     }
@@ -35,7 +36,7 @@
     }
 }
 
-@keyframes disappear {
+@keyframes TimelineDisappear {
     100% {
         opacity: 0.6;
     }

@@ -19,38 +19,33 @@
     margin: auto;
     justify-self: center;
     opacity: 0;
-    animation: appear 1.7s ease 0.1s forwards;
+    animation: HeaderAppear 1.7s ease 0.1s forwards;
 }
 
 .formContainer {
-    display: grid;
-    grid-row: 3/9;
-    grid-column: 1/6;
+    background-color: rgb(20, 20, 20);
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgb(10, 10, 10);
+    display: inline;
+    grid-row: 3/8;
+    grid-column: 1/13;
+    width: 99%;
     margin-left: 10px;
-    justify-content: left;
+    justify-content: center;
     align-content: flex-start;
-    padding-left: 100px;
+    overflow-y: auto;
 }
 
 .formContainer > h2 {
+    padding-top: 10px;
     color: #38bdf8;
     font-size: 40px;
+    margin: auto;
+    max-width: 80%;
+    text-align: center;
 }
 
-.musicForm {
-    width: 500px;
-    height: 300px;
-    padding: 32px;
-    border-radius: 10px;
-    box-shadow: 0 4px 16px rgb(255, 255, 255);
-}
-
-.fileInput {
-    border: 1px solid red;
-    padding: 20px;
-}
-
-@keyframes appear {
+@keyframes HeaderAppear {
     0% {
         transform: translateY(900px);
         opacity: 0;

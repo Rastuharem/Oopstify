@@ -1,0 +1,93 @@
+.musicForm {
+    width: 80%;
+    min-height: fit-content;
+    height: 100%;
+    margin: auto;
+    padding: 32px;
+}
+
+.svgContainer {
+    fill: white;
+}
+
+.input__wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.input__file {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.input__file-icon-wrapper {
+    height: 60px;
+    width: 60px;
+    margin-right: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-right: 1px solid #fff;
+}
+
+.input__file-button-text {
+    margin: 0px 30px;
+}
+
+.input__file-button {
+    width: 100%;
+    max-width: 290px;
+    height: 60px;
+    background: #38bdf8;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 700;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    border-radius: 3px;
+    margin: auto;
+}
+
+.senderContainer {
+    border: 2px solid red;
+    width: 100%;
+    justify-content: center;
+    display: inline-flex;
+    justify-self: center;
+    margin: auto;
+    margin-top: 300px;
+    height: fit-content;
+}
+
+.filePathContainer {
+    border: 2px solid red;
+    height: 30px;
+}
+
+#FilePath {
+    border: 2px solid aqua;
+}
+
+#SendBtn {
+    width: 290px;
+    height: 60px;
+    background-color: #38bdf8;
+    font: inherit;
+    font-size: 20px;
+    border: none;
+}

@@ -6,7 +6,8 @@ import SongListHeader from "./SongListHeader";
 
 const SongList = ({ songs = [], changePlaylist, originalPlaylist }) => {
 
-  const contentPerPage = 50;
+  const disablePages = songs.length;
+  const contentPerPage = disablePages;
 
   const [songTags, setSongTags] = useState();
   const [firstContentIndex, setFirstContentIndex] = useState(0);
@@ -40,7 +41,8 @@ const SongList = ({ songs = [], changePlaylist, originalPlaylist }) => {
           />
           <div id="song-list">
             {songTags}
-            <PaginationBtns contentPerPage={contentPerPage} length={songs.length} setFirstIndex={getFirstContentIndex} setLastIndex={getLastContentIndex}/>
+            {/*Pagination
+            <PaginationBtns contentPerPage={contentPerPage} length={songs.length} setFirstIndex={getFirstContentIndex} setLastIndex={getLastContentIndex} />*/}
           </div>
         </>
       ) : (
