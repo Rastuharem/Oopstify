@@ -20,13 +20,16 @@ svg {
     margin: 0px 3rem;
     transition: all 0.19s ease-in-out;
 }
+
 #active > svg {
     color: #38bdf8;
 }
+
 i.fas.fa-play-circle,
 i.fas.fa-pause-circle {
     font-size: 1.9rem;
 }
+
 .control,
 .main-control > i {
     color: #e2e8f0;

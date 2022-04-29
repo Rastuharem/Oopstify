@@ -3,7 +3,7 @@
 }
 
 .textContainer {
-    height: 90%;
+    height: 100%;
     display: grid;
     grid-row: 2/3;
     grid-column: 1/13;
@@ -12,12 +12,14 @@
 }
 
 .textContainer > h1 {
+    padding-top: 15px;
     color: white;
     font-size: 50px;
     text-shadow: 1px 1px 4px black;
     position: absolute;
     margin: auto;
     justify-self: center;
+    align-self: center;
     opacity: 0;
     animation: HeaderAppear 1.7s ease 0.1s forwards;
 }
@@ -27,13 +29,16 @@
     border-radius: 10px;
     box-shadow: 0 4px 16px rgb(10, 10, 10);
     display: inline;
-    grid-row: 3/8;
+    grid-row: 3/9;
     grid-column: 1/13;
-    width: 99%;
-    margin-left: 10px;
+    width: 90%;
+    margin: auto;
+    align-self:auto;
     justify-content: center;
     align-content: flex-start;
     overflow-y: auto;
+    overflow-x: hidden;
+    height: 92%;
 }
 
 .formContainer > h2 {
@@ -54,4 +59,24 @@
         transform: translateY(0px);
         opacity: 1;
     }
+}
+
+.formContainer::-webkit-scrollbar {
+    width: 2px;
+}
+
+/* Track */
+.formContainer::-webkit-scrollbar-track {
+    background: rgb(15, 23, 42);
+}
+
+/* Handle */
+.formContainer::-webkit-scrollbar-thumb {
+    background: rgb(148, 163, 184);
+    border-radius: 4px;
+}
+
+/* Handle on hover */
+#song-list::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
 }

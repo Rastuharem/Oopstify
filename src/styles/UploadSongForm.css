@@ -63,6 +63,22 @@
     margin: auto;
 }
 
+.filePathContainer {
+    min-height: 50px;
+    display: inline-flex;
+}
+
+#FilePath {
+    height: fit-content;
+    align-self: center;
+    border-radius: 10px;
+    background-color: #38bdf8;
+    padding: 10px;
+    margin: 0px 10px;
+    width: fit-content;
+    
+}
+
 .senderContainer {
     border: 2px solid red;
     width: 100%;
@@ -70,17 +86,9 @@
     display: inline-flex;
     justify-self: center;
     margin: auto;
-    margin-top: 300px;
     height: fit-content;
-}
-
-.filePathContainer {
-    border: 2px solid red;
-    height: 30px;
-}
-
-#FilePath {
-    border: 2px solid aqua;
+    margin-top: 1000px;
+    
 }
 
 #SendBtn {

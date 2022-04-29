@@ -1,33 +1,33 @@
 import React from "react";
 import "../styles/UploadSongForm.css"
 import { UploadSvg } from "../svg";
+import songs from "../data/songs.json"
 
 const UploadSongForm = () => {
-
-    //   let inputs = document.querySelectorAll(".input__file");
-    //   Array.prototype.forEach.call(inputs, ((input) => {
-    //     let label = input.nextElementSibling,
-    //       labelVal = label.querySelector(".input__file-button-text").innerText;
-    //     input.addEventListener("change", ((e) => {
-    //       let countFiles = "";
-    //       if (this.files && this.files.length >= 1)
-    //         countFiles = this.files.length;
-    //       if (countFiles)
-    //         label.querySelector(".input__file-button-text").innerText = "Выбрано файлов: " + countFiles;
-    //       else
-    //         label.querySelector(".input__file-button-text").innerText = labelVal;
-    //     }))}));
 
     const showUploadedFile = () => {
         const input = document.getElementById("input__file");
         const label = document.getElementById("FilePath");
-        const countFiles = input.value;
-        label.innerText = "Chosen file: " + countFiles;
+        if (input.files.length !== 1) {
+            alert("You can upload only one file at a time!");
+        } else {
+            const file = input.files[0];
+            console.log(file);
+            label.innerText = file.name;
+            showSongOption();
+        }
+    }
+
+    const showSongOption = () => {
+        const songSample = songs[0];
+        const songFields = [];
+        for (let key in songSample) {
+            songFields.push(key);
+        }
+        console.log(songFields);
+        
     }
       
-
-
-
     return(
         <form
           action="/upload"
@@ -55,12 +55,16 @@ const UploadSongForm = () => {
           </div>
             <div className="songInfoContainer">
                 <div className="filePathContainer">
-                <label id="FilePath"></label>
-                </div>
+                    <h1>Selected file: </h1>
+                    <label id="FilePath"></label>
 
+
+
+
+                </div>
             </div>
           <div className="senderContainer">
-            <input type="submit" value="Upload" id="SendBtn"/>
+            <input type="submit" value="Upload" id="SendBtn" hidden="false" />
             </div>
         </form>
     );
