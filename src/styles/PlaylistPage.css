@@ -20,8 +20,8 @@
     margin: auto;
     justify-self: center;
     align-self: center;
-    opacity: 0;
-    animation: HeaderAppear 1.7s ease 0.1s forwards;
+    /*opacity: 0;
+    animation: HeaderAppear 1.7s ease 0.1s forwards;*/
 }
 
 .formContainer {

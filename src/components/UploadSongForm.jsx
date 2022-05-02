@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/UploadSongForm.css"
 import { UploadSvg } from "../svg";
 import songs from "../data/songs.json"
@@ -6,13 +6,18 @@ import songs from "../data/songs.json"
 
 
 const UploadSongForm = () => {
-
     const newSong = Object.assign({}, songs[0]);
-    for(let keys in newSong) {
-        newSong[keys] = "";
-    }
+
+    newSong.name = "";
+    newSong.author = "";
+    newSong.id = 0;
+    newSong.url = "";
+    newSong.links.images[0] = "";
+    newSong.links.images[1] = "";
 
     let SongFields = [];
+    let [authorImg, albumImg] = [];
+    const [FieldInputs, setFieldInputs] = useState();
 
     const showUploadedFile = () => {
         const input = document.getElementById("input__file");
@@ -31,12 +36,21 @@ const UploadSongForm = () => {
         for (let key in newSong) {
             SongFields.push([key, newSong[key]]);
         }
-        console.log(SongFields[SongFields.length-1]);
+        console.log(SongFields[0][0]);
+        authorImg = SongFields[SongFields.length-1][1]["images"][0];
+        albumImg = SongFields[SongFields.length-1][1]["images"][1];
+        SongFields[SongFields.length-1]=['authorImg', authorImg];
+        SongFields.push(['albumImg', albumImg]);
+        setFieldInputs(SongFields.map((index)=>{
+          return (
+            <div key={index}>
+              <h2>{SongFields[index]}: </h2>
+              <input value={SongFields[index][1]}></input>
+            </div>
+          )}));
     }
 
-    //const [authorImg, albumImg] = [SongFields["links"]["images"][0], SongFields["links"]["images"][1]]
-
-    //const FieldsInputs = SongFields.map
+    
       
     return(
         <form
@@ -69,7 +83,7 @@ const UploadSongForm = () => {
                     <label id="FilePath"></label>
                 </div>
                 <div className="songFieldsContainer">
-                    {SongFields}
+                    {FieldInputs}
                 </div>
             </div>
           <div className="senderContainer">
