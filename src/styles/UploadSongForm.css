@@ -79,15 +79,30 @@
     
 }
 
+.songFieldsContainer {
+    width: 60%;
+    margin: 20px;
+}
+
+.inputContainer {
+    margin-bottom: 15px;
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.fieldInput {
+    width: 480px;
+    color: black;
+}
+
 .senderContainer {
-    border: 2px solid red;
     width: 100%;
     justify-content: center;
     display: inline-flex;
     justify-self: center;
     margin: auto;
     height: fit-content;
-    margin-top: 1000px;
     
 }
 
@@ -98,4 +113,6 @@
     font: inherit;
     font-size: 20px;
     border: none;
+    border-radius: 10px;
+    display: none;
 }
