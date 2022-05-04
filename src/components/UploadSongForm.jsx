@@ -46,7 +46,7 @@ const UploadSongForm = () => {
       newSong.id = songs[songs.length-1]["id"] + 1;
       newSong.links.images[0] = NewSongAuthorImg;
       newSong.links.images[1] = NewSongAlbumImg;
-      newSong.url= ;
+      newSong.url = "";
       console.log(newSong);
       
     }
