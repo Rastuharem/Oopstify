@@ -120,7 +120,6 @@ const Player = ({
         controls
         src={songs[selectedSongId].url}
         preload="false"
-        //preload
         onEnded={() => {
           if(shuffled) {
             selectSongById(Math.round(Math.random() * songs.length))

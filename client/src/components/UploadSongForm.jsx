@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "../styles/UploadSongForm.css";
 import { UploadSvg } from "../svg";
-import songs from "../data/songs.json";
+import axios from "axios";
 
 const UploadSongForm = () => {
-  const newSong = Object.assign({}, songs[0]);
+  //const newSong = Object.assign({}, songs[0]);
 
   const [UploadedFile, setUploadedFile] = useState(null);
 
@@ -13,14 +13,14 @@ const UploadSongForm = () => {
   const [NewSongAuthorImg, setNewSongAuthorImg] = useState("");
   const [NewSongAlbumImg, setNewSongAlbumImg] = useState("");
 
-  useEffect(() => {
-    newSong.name = "";
-    newSong.author = "";
-    newSong.id = 0;
-    newSong.url = "";
-    newSong.links.images[0] = "";
-    newSong.links.images[1] = "";
-  }, []);
+  // useEffect(() => {
+  //   newSong.name = "";
+  //   newSong.author = "";
+  //   newSong.id = 0;
+  //   newSong.url = "";
+  //   newSong.links.images[0] = "";
+  //   newSong.links.images[1] = "";
+  // }, []);
 
   const showUploadedFile = () => {
     const input = document.getElementById("input__file");
@@ -33,23 +33,28 @@ const UploadSongForm = () => {
     }
   };
 
-  const CreateNewSong = (e) => {
+  const submitNewSong = (e) => {
     e.preventDefault();
-    if (NewSongTitle==="" || NewSongAuthor==="") {
-      alert("Please, fill required inputs!")
-    } else {
+    axios.post("http://localhost:3001/api/upload", {
+      songTitle: NewSongTitle,
+      songAuthor: NewSongAuthor,
+      songAuthorImg: NewSongAuthorImg,
+      songAlbumImg: NewSongAlbumImg,
+    }).then(()=> {
+      alert("success!");
+    })
 
-
-
-      newSong.name = NewSongTitle;
-      newSong.author = NewSongAuthor;
-      newSong.id = songs[songs.length-1]["id"] + 1;
-      newSong.links.images[0] = NewSongAuthorImg;
-      newSong.links.images[1] = NewSongAlbumImg;
-      newSong.url = "";
-      console.log(newSong);
-      
-    }
+    // if (NewSongTitle==="" || NewSongAuthor==="") {
+    //   alert("Please, fill required inputs!")
+    // } else {
+    //   newSong.name = NewSongTitle;
+    //   newSong.author = NewSongAuthor;
+    //   newSong.id = songs[songs.length-1]["id"] + 1;
+    //   newSong.links.images[0] = NewSongAuthorImg;
+    //   newSong.links.images[1] = NewSongAlbumImg;
+    //   newSong.url = "";
+    //   console.log(newSong);
+    // }
   }
 
   return (
@@ -139,7 +144,7 @@ const UploadSongForm = () => {
 
         </div>
         <div className="senderContainer">
-          <button type="submit" id="SendBtn" onClick={CreateNewSong}>Upload song</button>
+          <button type="submit" id="SendBtn" onClick={submitNewSong}>Upload song</button>
         </div>
       </div>
     </form>

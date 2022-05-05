@@ -2,7 +2,7 @@ import "../styles/SongListHeader.css";
 import { useEffect, useState } from "react";
 import { ArrowSvg } from "../svg";
 
-const SongListHeader = ({ songs = [], setNewSongList, originalPlaylist}) => {
+const SongListHeader = ({ songs, setNewSongList, originalPlaylist}) => {
   const [filteredSongs, setFilteredSongs] = useState([...songs]);
   const [SelectedSort, setSelectedSort] = useState("index");
   const [Direction, setDirection] = useState("down");
@@ -36,7 +36,7 @@ const SongListHeader = ({ songs = [], setNewSongList, originalPlaylist}) => {
       bufSongs.reverse();
     }
     setFilteredSongs(bufSongs);
-  }, [SelectedSort, Direction, originalPlaylist]);
+  }, [SelectedSort, Direction]);
 
   const indexClick = () => {
     setSelectedSort("index");

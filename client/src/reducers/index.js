@@ -1,5 +1,10 @@
 import { combineReducers } from "redux";
-import songs from "../data/songs.json";
+import axios from "axios";
+
+let songs=[];
+axios.get("http://localhost:3001/api/get").then((responce)=>{
+    songs=responce.data;
+});
 
 const songsReducer = () => {
     return songs;

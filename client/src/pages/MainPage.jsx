@@ -3,10 +3,9 @@ import "../styles/MainPage.css";
 import NavBar from "../components/NavBar";
 import Player from "../components/Player";
 import SongList from "../components/SongList";
-import songs from "../data/songs.json";
 import SongDetail from "../components/SongDetail";
 
-const MainPage = () => {
+const MainPage = ({songs}) => {
   const [Playlist, setPlaylist] = useState([...songs]);
 
   useEffect(() => {
@@ -24,7 +23,7 @@ const MainPage = () => {
     <>
       <NavBar />
       <SongDetail songs={Playlist}/>
-      <SongList songs={Playlist} changePlaylist={changePlaylistCauseFilter} originalPlaylist={songs} />
+      <SongList songs={Playlist} changePlaylist={changePlaylistCauseFilter} originalPlaylist={[...songs]} />
       <Player songs={Playlist} />
       
       <a href = "#focused" id = "focus-link" hidden>
