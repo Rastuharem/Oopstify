@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/UploadSongForm.css";
 import { UploadSvg } from "../svg";
-import axios from "axios";
 
 const UploadSongForm = () => {
   const [UploadedFile, setUploadedFile] = useState(null);
