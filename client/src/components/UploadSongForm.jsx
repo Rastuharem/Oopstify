@@ -26,18 +26,18 @@ const UploadSongForm = () => {
     }
   };
 
-  const submitNewSong = (e) => {
-    e.preventDefault();
-    axios.post("http://localhost:3001/api/upload", {
-      songFile: UploadedFile,
-      songTitle: NewSongTitle,
-      songAuthor: NewSongAuthor,
-      songAuthorImg: NewSongAuthorImg,
-      songAlbumImg: NewSongAlbumImg,
-    }).then(()=> {
-      alert("success!");
-    })
-  }
+  // const submitNewSong = (e) => {
+  //   e.preventDefault();
+  //   axios.post("http://localhost:3001/api/upload", {
+  //     songFile: UploadedFile,
+  //     songTitle: NewSongTitle,
+  //     songAuthor: NewSongAuthor,
+  //     songAuthorImg: NewSongAuthorImg,
+  //     songAlbumImg: NewSongAlbumImg,
+  //   }).then(()=> {
+  //     alert("success!");
+  //   })
+  // }
 
   return (
     <form
