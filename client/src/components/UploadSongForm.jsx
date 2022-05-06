@@ -4,8 +4,6 @@ import { UploadSvg } from "../svg";
 import axios from "axios";
 
 const UploadSongForm = () => {
-  //const newSong = Object.assign({}, songs[0]);
-
   const [UploadedFile, setUploadedFile] = useState(null);
 
   const [NewSongTitle, setNewSongTitle] = useState("");
@@ -13,14 +11,9 @@ const UploadSongForm = () => {
   const [NewSongAuthorImg, setNewSongAuthorImg] = useState("");
   const [NewSongAlbumImg, setNewSongAlbumImg] = useState("");
 
-  // useEffect(() => {
-  //   newSong.name = "";
-  //   newSong.author = "";
-  //   newSong.id = 0;
-  //   newSong.url = "";
-  //   newSong.links.images[0] = "";
-  //   newSong.links.images[1] = "";
-  // }, []);
+  useEffect(()=>{
+    console.log(UploadedFile)
+  }, [UploadedFile]);
 
   const showUploadedFile = () => {
     const input = document.getElementById("input__file");
@@ -36,6 +29,7 @@ const UploadSongForm = () => {
   const submitNewSong = (e) => {
     e.preventDefault();
     axios.post("http://localhost:3001/api/upload", {
+      songFile: UploadedFile,
       songTitle: NewSongTitle,
       songAuthor: NewSongAuthor,
       songAuthorImg: NewSongAuthorImg,
@@ -43,30 +37,18 @@ const UploadSongForm = () => {
     }).then(()=> {
       alert("success!");
     })
-
-    // if (NewSongTitle==="" || NewSongAuthor==="") {
-    //   alert("Please, fill required inputs!")
-    // } else {
-    //   newSong.name = NewSongTitle;
-    //   newSong.author = NewSongAuthor;
-    //   newSong.id = songs[songs.length-1]["id"] + 1;
-    //   newSong.links.images[0] = NewSongAuthorImg;
-    //   newSong.links.images[1] = NewSongAlbumImg;
-    //   newSong.url = "";
-    //   console.log(newSong);
-    // }
   }
 
   return (
     <form
-      action="/upload"
+      action="http://localhost:3001/api/upload"
       method="post"
       encType="multipart/form-data"
       className="musicForm"
     >
       <div className="input__wrapper">
         <input
-          name="file"
+          name="filedata"
           type="file"
           id="input__file"
           className="input input__file"
@@ -92,22 +74,24 @@ const UploadSongForm = () => {
               <div className="inputContainer">
                 <label id="SongTitleLabel">Type title here: </label>
                 <input
+                  name="songTitle"
                   type="text"
                   id="SongTitle"
                   className="fieldInput"
                   value={NewSongTitle}
-                  onChange={(event) => setNewSongTitle(event.target.value)}
+                  onChange={(e) => setNewSongTitle(e.target.value)}
                   placeholder="Required"
                 />
               </div>
               <div className="inputContainer">
                 <label id="SongAuthorLabel">Type author here: </label>
                 <input
+                  name="songAuthor"
                   type="text"
                   id="SongAuthor"
                   className="fieldInput"
                   value={NewSongAuthor}
-                  onChange={(event) => setNewSongAuthor(event.target.value)}
+                  onChange={(e) => setNewSongAuthor(e.target.value)}
                   placeholder="Required"
                 />
               </div>
@@ -116,11 +100,12 @@ const UploadSongForm = () => {
                   Type link to author img here:{" "}
                 </label>
                 <input
+                  name="songAuthorImg"
                   type="text"
                   id="SongAuthorImg"
                   className="fieldInput"
                   value={NewSongAuthorImg}
-                  onChange={(event) => setNewSongAuthorImg(event.target.value)}
+                  onChange={(e) => setNewSongAuthorImg(e.target.value)}
                   placeholder="Can be empty"
                 />
               </div>
@@ -129,11 +114,12 @@ const UploadSongForm = () => {
                   Type link to album img here:{" "}
                 </label>
                 <input
+                  name="songAlbumImg"
                   type="text"
                   id="SongAlbumImg"
                   className="fieldInput"
                   value={NewSongAlbumImg}
-                  onChange={(event) => setNewSongAlbumImg(event.target.value)}
+                  onChange={(e) => setNewSongAlbumImg(e.target.value)}
                   placeholder="Can be empty"
                 />
               </div>
@@ -144,7 +130,7 @@ const UploadSongForm = () => {
 
         </div>
         <div className="senderContainer">
-          <button type="submit" id="SendBtn" onClick={submitNewSong}>Upload song</button>
+          <button type="submit" id="SendBtn" >Upload song</button>
         </div>
       </div>
     </form>

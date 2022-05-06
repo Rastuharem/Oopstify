@@ -1,5 +1,4 @@
-import React, { useCallback } from "react";
-import { useEffect, useState } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import WelcomePage from "./WelcomePage"
 import MainPage from "./MainPage";
 import PlaylistPage from "./PlaylistPage"
@@ -28,7 +27,6 @@ const App = () => {
       {IsLoading ? (
         <div>Loading...</div>
       ) : (
-        <>
           <BrowserRouter>
             <Routes>
               <Route exact path="/" element={<MainPage songs={songs} />} />
@@ -36,7 +34,6 @@ const App = () => {
               <Route exact path="/playlist" element={<PlaylistPage />} />
             </Routes>
           </BrowserRouter>
-        </>
       )}
     </>
   );
