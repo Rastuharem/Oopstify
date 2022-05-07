@@ -39,7 +39,6 @@ app.get('/api/get/:id', (req, res) => {
 
 app.post("/api/upload", upload.single("filedata"), (req, res)=> {
     const filedata = req.file;
-    console.log(filedata);
 
     const songTitle = req.body.songTitle;
     const songAuthor = req.body.songAuthor;
@@ -65,7 +64,7 @@ app.post("/api/upload", upload.single("filedata"), (req, res)=> {
     }
     songs.push(newSong);
     fs.writeFileSync("./data/songs.json", JSON.stringify(songs));
-    res.send(newSong);
+    res.send("File was uploaded succesfully! You can now return back to the main page.");
 });
 
 app.listen(3001, () => {

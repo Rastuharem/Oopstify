@@ -1,0 +1,48 @@
+.loadingScreenCont {
+    width: 99%;
+    height: 99%;
+    grid-row: 2/8;
+    grid-column: 2/12;
+    display: inline;
+    margin: auto;    
+    text-align: center;
+}
+
+.loadingCircle {
+    margin: 80px auto;
+    width: 250px;
+    height: 250px;
+    border: 20px groove #38bdf8; 
+    border-radius: 50%;
+    animation: CircleAnimation 2s ease infinite;
+    background-image: url("../../public/Oopstify.ico");
+}
+
+.loadingScreenCont > h1 {
+    width: 99%;
+    font-size: 70px;
+    color: #38bdf8;
+}
+
+.loadingScreenCont > h2 {
+    width: 99%;
+    font-size: 40px;
+    color: #fff;
+}
+
+.smileCont {
+    transform: rotate(90deg);
+    margin: 30px;
+}
+
+@keyframes CircleAnimation {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.3);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}

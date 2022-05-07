@@ -1,7 +1,7 @@
 import React, { useCallback, useState, useEffect } from "react";
-import WelcomePage from "./WelcomePage"
 import MainPage from "./MainPage";
-import PlaylistPage from "./PlaylistPage"
+import PlaylistPage from "./PlaylistPage";
+import LoadingScreen from "../components/LoadingScreen";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import axios from "axios";
 
@@ -25,12 +25,11 @@ const App = () => {
   return (
     <>
       {IsLoading ? (
-        <div>Loading...</div>
+          <LoadingScreen />
       ) : (
           <BrowserRouter>
             <Routes>
               <Route exact path="/" element={<MainPage songs={songs} />} />
-              <Route exact path="/welcome" element={<WelcomePage />} />
               <Route exact path="/playlist" element={<PlaylistPage />} />
             </Routes>
           </BrowserRouter>
