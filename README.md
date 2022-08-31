@@ -15,4 +15,4 @@ All music was taken from other open sources.
 
 ## Some notes
 * Some songs could not be working, because of deleted or changed links. If you really want song to work - you need to find new link to it and paste it in music list or upload them from your pc
-* Playing songs from your pc can't work directly due to Chrome safety rules: you can disable it in your browser (which i won't reccomend to do) or use http-server lib. Project is working by second method by default. You can find more info how to start server in comments in "server" -> "index.js". 
+* Playing songs from your pc can't work directly due to Chrome safety rules: you can disable it in your browser (which i won't reccomend to do) or use http-server lib. Project is working by second method by default. You can find more info how to start server in comments in "server" -> "index.js"
