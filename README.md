@@ -1,7 +1,7 @@
 # Oopstify
 
 ## Disclaimer
-This project represents music musical striming service, which has such functions as
+This project represents musical striming service, which has such functions as
 * Loading music list from server
 * Playing and stopping music chosen by user
 * Downloading chosen music
