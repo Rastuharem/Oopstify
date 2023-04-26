@@ -10,7 +10,8 @@ This project represents musical striming service, which has such functions as
 * Sorting by index, track name or author name
 * Adding user's own music to list and saving it
 * Some animations and other aesthetics
-This is study project and it was inspired by Spotify. Author does not want to make any money or hype on it.
+* 
+## This is study project and it was inspired by Spotify. Author does not want to make any money or hype on it.
 All music was taken from other open sources.
 
 ## Some notes
